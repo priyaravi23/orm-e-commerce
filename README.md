@@ -4,6 +4,33 @@
 
 *Build the back end for an e-commerce site. Take a working Express.js API and configure it to use Sequelize to interact with a MySQL database.*
 
+
+### App Demo
+
+- Create Schema and Seed data
+
+![](images/demo-6.gif)
+
+- GET routes to return all categories, all products
+
+![](images/demo-1.gif)
+
+- GET routes to return a single category, a single product, and a single tag
+
+![](images/demo-2.gif)
+
+- POST, PUT, and DELETE routes for categories
+
+![](images/demo-3.gif)
+
+- POST, PUT, and DELETE routes for Tags
+
+![](images/demo-4.gif)
+
+- POST, PUT, and DELETE routes for products
+
+![](images/demo-5.gif)
+
 ### User Story
 
 ```text
@@ -33,107 +60,107 @@ THEN I am able to successfully create, update, and delete data in my database
 - `Category`
 
     - `id`
-    
+
         - Integer
-        
+
         - Doesn't allow null values
-        
+
         - Set as primary key
-        
+
         - Uses auto increment
 
     - `category_name`
 
         - String
-        
+
         - Doesn't allow null values
 
 - `Product`
 
     - `id`
-    
+
         - Integer
-        
+
         - Doesn't allow null values
-        
+
         - Set as primary key
-        
+
         - Uses auto increment
 
     - `product_name`
-    
+
         - String
-        
+
         - Doesn't allow null values
-    
+
     - `price`
-    
+
         - Decimal
-        
+
         - Doesn't allow null values
-        
+
         - Validates that the value is a decimal
-    
+
     - `stock`
-    
+
         - Integer
-        
+
         - Doesn't allow null values
-        
+
         - Set a default value of 10
-        
+
         - Validates that the value is numeric
-    
+
     - `category_id`
-    
+
         - Integer
-        
+
         - References the category model's id
 
 - `Tag`
 
     - `id`
-    
+
         - Integer
-        
+
         - Doesn't allow null values
-        
+
         - Set as primary key
-        
+
         - Uses auto increment
-    
+
     - `tag_name`
-    
+
         - String
-    
+
 - `ProductTag`
-    
+
     - `id`
-    
+
         - Integer
-        
+
         - Doesn't allow null values
-        
+
         - Set as primary key
-        
+
         - Uses auto increment
 
     - `product_id`
-    
+
         - Integer
-        
+
         - References the product model's id
-    
+
     - `tag_id`
-    
+
         - Integer
-        
+
         - References the tag model's id
-        
+
 ### Associations
 
 *You'll need to execute association methods on your Sequelize models to create the following relationships between them:*
- 
+
 - Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
 
 - Category has many Product models.
