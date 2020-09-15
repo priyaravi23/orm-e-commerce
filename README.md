@@ -134,3 +134,13 @@ THEN I am able to successfully create, update, and delete data in my database
 - Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
 
 - Tag belongs to many Product models.
+
+### Instructions on how to run the app
+
+- Add a .env file to the root of the app with the following details
+
+```text
+DB_NAME='ecommerce_db'
+DB_USER='root'
+DB_PW='xxx'
+```
